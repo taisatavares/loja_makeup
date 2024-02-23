@@ -346,15 +346,16 @@ aside p{
 }
 
 @media (max-width: 584px){
-  .container{
+  /*.container{
     width: 400px;
 
     
-  }
-
-  /*.imagem-make {
-    width: 150px;
   }*/
+
+  .imagem-make {
+    width: 150px;
+    height: 200px;
+  }
 
   .titulo{
     font-size: 36px;
@@ -394,5 +395,7 @@ aside p{
     font-size: 12px;
     
   }
+
+  
   
 }

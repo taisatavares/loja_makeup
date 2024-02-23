@@ -87,7 +87,7 @@ hr {
   float: left;
   border-radius: 8%;
   margin: 0 20px 10px 0;
-  width: 200px;
+  width: 130px;
   height: auto;
 }
 
@@ -346,16 +346,16 @@ aside p{
 }
 
 @media (max-width: 584px){
-  .container{
+  /*.container{
     width: 350px;
     height: 350px;
     
-  }
+  }*/
 
-  .imagem-make {
-    width: 150px;
+  /*.imagem-make {
+    width: 130px;
     height: 200px;
-  }
+  }*/
 
   .titulo{
     font-size: 36px;

@@ -213,7 +213,7 @@ aside p{
 
 .preco-produto {
   margin-right: 12px;
-  font-family: var(--fonte4);
+  font-family: var(--fonte2);
   font-weight: bold;
 }
 
@@ -346,11 +346,11 @@ aside p{
 }
 
 @media (max-width: 584px){
-  /*.container{
-    width: 400px;
-
+  .container{
+    width: 350px;
+    height: 350px;
     
-  }*/
+  }
 
   .imagem-make {
     width: 150px;

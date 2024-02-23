@@ -65,7 +65,7 @@ hr {
 }*/
 
 .main-section {
-  padding: 40px 64px;
+  padding: 40px 0 64px;
   /*background-image: linear-gradient(to left, rgba(192, 177, 168, 0.747), rgba(214, 157, 153, 0.863));*/
 }
 
@@ -87,13 +87,14 @@ hr {
   float: left;
   border-radius: 8%;
   margin: 0 20px 10px 0;
-  width: 130px;
+  width: 200px;
   height: auto;
 }
 
 .descricao {
   font-family: var(--fonte2);
 }
+
 
 .informacoes {
   display: flex;
@@ -347,8 +348,8 @@ aside p{
 
 @media (max-width: 584px){
   /*.container{
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 400px;
     
   }*/
 

@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rubik&family=Secular+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@300;400;700&family=Work+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Protest+Riot&family=Rubik&family=Secular+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100.. 1000&family=Protesto+Revolução&family=Protesto+Riot&family=Rubik&family=Secular+One&display=swap');
+
+:root {
+    --fonte1: 'Protest Revolution', cursive;
+    --fonte2: 'Bebas Neue', cursive;
+    --fonte3: 'Protest Riot', cursive;
+    --fonte4: 'DM Sans', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+
+button {
+    cursor: pointer;
+  }
+
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(230, 14, 97, 0.616);
+}
+
+.nav-container{
+  width: 100%;
+  
+}
+
+nav a {
+  text-decoration: none;
+  padding: 16px;
+  display: inline-block;
+  font-family: var(--fonte2);
+  font-size: 25px;
+  color: black;
+}
+
+hr {
+    width: 100%;
+  }
+
+.titulo{
+    font-size: 60px;
+    font-family: var(--fonte1);
+    font-weight: bolder;
+}
+
+/*.main {
+  min-height: 250px;
+  max-width: 1000px;
+}*/
+
+.main-section {
+  padding: 40px 64px;
+  /*background-image: linear-gradient(to left, rgba(192, 177, 168, 0.747), rgba(214, 157, 153, 0.863));*/
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+}
+
+.titulo-2{
+  font-family: var(--fonte2);
+  font-size: 30px;
+  text-align: center
+
+}
+
+.imagem-make {
+  float: left;
+  border-radius: 8%;
+  margin: 0 20px 10px 0;
+  width: 200px;
+  height: auto;
+}
+
+.descricao {
+  font-family: var(--fonte4);
+}
+
+.informacoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  background-image: linear-gradient(to left, rgba(192, 177, 168, 0.747), rgba(214, 157, 153, 0.863));
+}
+
+.picture {
+  width: 25px;
+}
+
+.picture-2 {
+  width: 40px;
+  padding: 5px;
+  
+}
+
+
+
+section ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+  font-family: var(--fonte4);
+  font-weight: 30px;
+  
+}
+
+aside {
+  background-color: black;
+  /*display: inline-block;*/
+  /*flex-direction: row;*/
+  /*justify-content: space-between;*/
+  padding: 20px;
+  padding-right: 50px;
+  
+}
+
+
+
+aside p{
+  font-family: var(--fonte4);
+  color: white;
+  text-align: center;
+}
+
+
+
+.logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.picture-3{
+  width: 40px;
+  padding: 5px;
+}
+
+.redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+
+
+
+.titulo-produto{
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.foto-produto {
+  width: 240px;
+  height: 144px;
+  
+}
+
+.section-produtos + .section-produtos{
+  margin-top: 80px;
+}
+
+.produtos-geral {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px;
+}
+
+.produto-make {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-produto {
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-family: var(--fonte4);
+}
+
+.preco-produto-container {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.preco-produto {
+  margin-right: 12px;
+  font-family: var(--fonte4);
+  font-weight: bold;
+}
+
+.botao-adicionar {
+  background: rgb(207, 9, 75);
+  color: white;
+  border: 2px solid rgb(207, 9, 75);
+  border-radius: 6px;
+  padding: 4px 2px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.botao-adicionar:hover {
+  background: transparent;
+  color: rgb(207, 9, 75);
+}
+
+.carrinho-normal {
+  border: 2px solid rgb(207, 9, 75);
+  border-radius: 10px;
+  background: white;
+}
+
+.section-title{
+  text-align: center;
+  padding: 15px;
+  font-family: var(--fonte2);
+  font-size: 30px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-head-item{
+  text-align: start;
+  border-bottom: 1px solid gray;
+  padding-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.second-col,
+.third-col {
+  width: 26%;
+}
+
+.cart-product{
+  padding: 8px 0;
+}
+
+.identificacao-produto{
+  display: flex;
+  align-items: center;
+}
+
+.cart-produto-imagem {
+  width: 120px;
+  height: 70px;
+  padding: 3px;
+}
+
+.cart-produto-title {
+  margin-left: 16px;
+  font-size: 18px;
+  font-family: var(--fonte4);
+}
+
+.cart-produto-preco {
+  font-family: var(--fonte4);
+}
+
+.produto-qtd-input{
+  width: 48px;
+  height: 34px;
+  border-radius: 6px;
+  border: 2px solid rgb(207, 9, 75);
+  text-align: center;
+  background: #eee;
+}
+
+.botao-remover{
+  margin-left: 12px;
+  background: red;
+  color: white;
+  padding: 10px 8px;
+  border: 0;
+  border-radius: 6px;
+  transition: filter 0.2s;
+}
+
+.botao-remover:hover {
+  filter: brightness(0.8);
+}
+
+.cart-total{
+  border-top: 1px solid gray;
+  text-align: end;
+  padding: 6px 16px 0 0;
+  font-size: 18px;
+}
+
+.cart-total strong{
+  margin-right: 12px;
+}
+
+.botao-compra{
+  display: flex;
+  margin: 24px auto 0;
+  margin-bottom: 24px;
+  background: rgb(46, 112, 32);
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 16px 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  transition: filter 0.2s;
+}
+
+.rodape{
+  text-align: center;
+  background-color: rgba(230, 14, 97, 0.616);
+  color: white;
+  padding: 5px;
+  font-size: 0.8em;
+  font-family: var(--fonte4);
+}
+
+@media (max-width: 584px){
+  .container{
+    width: 400px;
+
+    
+  }
+
+  .imagem-make {
+    width: 150px;
+  }
+
+  .titulo{
+    font-size: 36px;
+  }
+
+  .produtos-geral {
+    justify-content: center;
+  }
+
+
+  .products-container {
+    justify-content: center;
+  }
+
+  .identificacao-produto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-produto-title {
+    margin-top: 6px;
+  }
+
+  .produto-qtd-input {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .botao-remover {
+    display: block;
+    margin: 8px auto 0;
+    
+  }
+
+  .informacoes {
+    font-weight: 20px;
+    font-size: 12px;
+    
+  }
+  
+}

@@ -1,61 +1,57 @@
-
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+  } else {
+    ready()
+}
 var quantiaTotal = "0,00"
 
-function removeProduct(event){
+function ready(){
     const removerProduto = document.getElementsByClassName("botao-remover")
     for (var i = 0; i < removerProduto.length; i++){
-        removerProduto[i].addEventListener("click", function(event){
-            event.target.parentElement.parentElement.remove()
-            updateTotal()
+        removerProduto[i].addEventListener("click", removeProduct)
+}
+
+    const quantidadeInput = document.getElementsByClassName("produto-qtd-input")
+    for (var i = 0; i < quantidadeInput.length; i++) {
+        quantidadeInput[i].addEventListener("change", checkIfInputIsNull)
+}
+
+    const addToCarrinho = document.getElementsByClassName("botao-adicionar")
+    for (var i = 0; i < addToCarrinho.length; i++) {
+        addToCarrinho[i].addEventListener("click", addProductCart)
+            
         
         
-        })
-    }
+        
+}
+
+    const botaoCompra = document.getElementsByClassName("botao-compra")[0]
+    botaoCompra.addEventListener("click", makefinalizar)
+
 }
 
 
 
-
-
-
-const quantidadeInput = document.getElementsByClassName("produto-qtd-input")
-for (var i = 0; i < quantidadeInput.length; i++) {
-    quantidadeInput[i].addEventListener("change", checkIfInputIsNull)
-}
-
-const addToCarrinho = document.getElementsByClassName("botao-adicionar")
-for (var i = 0; i < addToCarrinho.length; i++) {
-    addToCarrinho[i].addEventListener("click", addProductCart)
-}
-
-const botaoCompra = document.getElementsByClassName("botao-compra")[0]
-botaoCompra.addEventListener("click", makefinalizar)
-
-function makefinalizar() {
-    if(quantiaTotal == "0,00") {
-        alert("Seu carrinho está vazio!")
-    } else {
-        alert(
-            `
-            Obrigada pela sua compra!
-            Valor do pedido: R$${quantiaTotal}
-            Volte sempre!
-            `
-        )
-    }
-
-    document.querySelector(".cart-table tbody").innerHTML = ""
+function removeProduct(event){
+    event.target.parentElement.parentElement.remove()
     updateTotal()
-}
+}      
 
 function checkIfInputIsNull(event) {
-     if (event.target.value == "0") {
-        event.target.parentElement.parentElement.remove()
-     }
-    updateTotal()
+    if (event.target.value == "0") {
+       event.target.parentElement.parentElement.remove()
+    }
+   updateTotal()
 }
+        
+        
+
+
+
+
 
 function addProductCart(event){
+    alert('Produto enviado ao carrinho')
     const button = event.target
     const productInfos = button.parentElement.parentElement
     const productImagem = productInfos.getElementsByClassName("foto-produto")[0].src
@@ -65,8 +61,11 @@ function addProductCart(event){
     for (var i = 0; i < productCartName.length; i++){
         if(productCartName[i].innerText == tituloProduto) {
             productCartName[i].parentElement.parentElement.getElementsByClassName("produto-qtd-input")[0].value++
+            updateTotal()
             return
         }
+        
+        
     }
 
     let newCartProduct = document.createElement("tr")
@@ -91,6 +90,23 @@ function addProductCart(event){
     updateTotal()
     newCartProduct.getElementsByClassName("produto-qtd-input")[0].addEventListener("change", checkIfInputIsNull)
     newCartProduct.getElementsByClassName("botao-remover")[0].addEventListener("click", removeProduct)
+}
+
+function makefinalizar() {
+    if(quantiaTotal == "0,00") {
+        alert("Seu carrinho está vazio!")
+    } else {
+        alert(
+            `
+            Obrigada pela sua compra!
+            Valor do pedido: R$${quantiaTotal}
+            Volte sempre!
+            `
+        )
+    }
+
+    document.querySelector(".cart-table tbody").innerHTML = ""
+    updateTotal()
 }
 
 function updateTotal() {
